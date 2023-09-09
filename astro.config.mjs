@@ -5,21 +5,29 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Eprouvette',
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
+			defaultLocale: 'root', // optional
+			locales: {
+				root: {
+					label: 'Français',
+					lang: 'fr', // lang is required for root locales
+				},
+				en: {
+					label: 'English',
+					lang: 'en',
+				},
+			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
-					],
+					label: 'Physique',
+					autogenerate: { directory: 'physique' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Chimie',
+					autogenerate: { directory: 'chimie' },
 				},
 			],
 		}),
