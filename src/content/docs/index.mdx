@@ -16,9 +16,9 @@ hero:
       icon: external
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, LinkCard, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Menu rapide
 
 <CardGrid stagger>
 	<Card title="Physique" icon="rocket">
@@ -34,3 +34,9 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 		Learn more in [the Starlight Docs](https://starlight.astro.build/).
 	</Card>
 </CardGrid>
+
+<LinkCard
+	title="Customizing Starlight"
+	description="Learn how to make your Starlight site your own with custom styles, fonts, and more."
+	href="/guides/customization/"
+/>
